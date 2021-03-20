@@ -1,6 +1,48 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+ }
+
+ html {
+     font-size: 62.5%;
+ }
+
+
 body
 {
     color: darkslategrey;
     text-align: left;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    margin: 5px;
+    padding: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header h1 {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 2.8rem;
+    font-weight: bold;
+    line-height: 2.4rem;
+    color: green;
+}
+
+header p {
+    font-size: 1.4rem;
+    margin-top: 10px;
+    font-weight: normal;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1rem;
+    color: lawngreen;
+}
+
+ul , li {   
+    margin: 5px;
+    padding 5px;
 }
