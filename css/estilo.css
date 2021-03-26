@@ -74,3 +74,15 @@ header h2 {
     padding: 5px;
     font-size: 2rem;
 }
+
+.cont-img {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.img-building {
+    width: 20%;
+}
