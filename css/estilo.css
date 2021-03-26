@@ -75,6 +75,8 @@ header h2 {
     font-size: 2rem;
 }
 
+/*contenedor imagen*/
+
 .cont-img {
     display: flex;
     flex-direction: column;
