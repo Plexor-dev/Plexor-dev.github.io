@@ -6,85 +6,91 @@
 
  html {
      font-size: 62.5%;
+     font-family: Arial, Helvetica, sans-serif;
+     background: linear-gradient(180deg, rgba(2,73,41,1) 0%, rgba(18,122,67,1) 48%, rgba(13,182,132,1) 96%);
+     min-height: 100%;
  }
 
+/* !Comienzo del Grid Principal*/
 
-body
-{
-    color: darkslategrey;
-    font-family: Arial, Helvetica, sans-serif;
+.grid {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    grid-template-rows: repeat(10, 1fr);
+    grid-gap: 5px;
+    place-items: center;
+    grid-template-areas: 
+                        ". header ."
+                         ". main ."
+                         ". main ."
+                         ". img ."
+                         "footer footer footer";
 }
 
 header {
-    position: relative;
+    grid-area: header;
+}
+
+
+.nav- {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100px;
-    min-width: 320px;
-}
-
-/* .nav-fixed {
-    padding: 5px;
-    background-color: #fff;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-} */
-
-.nav-fixed {
-    margin: 20px;
-    width: 90%;
     min-width: 280px;
-    display: flex;
-    flex-direction: column;
-    align-items:center;
+    margin-top: 10px;   
 }
 
-.nav-fixed h1 {
+.nav- h1 {
     font-size: 2.8rem;
     font-weight: bold;
     line-height: 2.4rem;
     color: green;
 }
 
-header h2 {
+.nav- h2 {
     font-size: 1.4rem;
     font-weight: normal;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1rem;
+    line-height: 2rem;
     color: lawngreen;
 }
 
 .list-of-pages { 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    min-width:320px;
+   grid-area: main;
 }
 
-.list-of-pages li {
-    width: 70%;
-    min-width: 280px;
-    margin: 10px;
-    padding: 5px;
+p {
+    list-style: none;
+    margin-bottom: 10px;
     font-size: 2rem;
+    padding: 5px;
+    color: #fff;
 }
 
-/*contenedor imagen*/
+a:hover {
+    color: yellow;
+}
+
+.container-page {
+    border:  solid rgb(182, 174, 174);
+}
+
+/* !contenedor imagen */
 
 .cont-img {
+    grid-area: img;
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    align-items: center;
 }
 
 .img-building {
-    width: 20%;
+    width: 40%;
+}
+
+.footer {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+    grid-area: footer;
 }
